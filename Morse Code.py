@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
-
-
 # Dictionary representing the morse code chart 
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...', 
                     'C':'-.-.', 'D':'-..', 'E':'.', 
@@ -95,8 +91,6 @@ def main():
 if __name__ == '__main__': 
     main() 
 
-
-# In[ ]:
 
 
 

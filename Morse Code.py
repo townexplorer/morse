@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # Dictionary representing the morse code chart 
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...', 
@@ -71,27 +69,26 @@ def decrypt(message):
             else: 
   
                 # accessing the keys using their values (reverse of encryption) 
-                decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT 
-                .values()).index(citext)] 
+                decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT.values()).index(citext)] 
                 citext = '' 
   
     return decipher 
-  
-# Hard-coded driver function to run the program 
-def main(): 
-    message = "vedant"
-    result = encrypt(message.upper()) 
-    print (result) 
-  
-    message = "---"
-    result = decrypt(message) 
-    print (result) 
-  
-# Executes the main function 
-if __name__ == '__main__': 
-    main() 
 
-
-
-
-
+#run
+while True:
+    
+    print("Would you like to encrypt or decrypt a message?")  
+    x=int(input("Enter 1.Encryption or 2.Decryption:"))
+    if x==1:
+        message=input("Enter message to be encrypted: ")
+        result = encrypt(message.upper()) 
+        print (result) 
+    elif x==2:  
+        message =input("Enter message to be decrypted: ")
+        result = decrypt(message) 
+        print (result) 
+    else: 
+        print("ERROR: Invalid input, please try again")
+    x=int(input("To exit press 0:"))
+    if(x==0):
+        break
